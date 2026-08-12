@@ -11,48 +11,49 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-  name = "知识"
-  title = "知识"
+  name = "Knowledge"
+  title = "Knowledge"
   pageRef = "blog"
   weight = 10
 
 [[main]]
-  name = "实战"
-  title = "实战"
+  name = "Practice"
+  title = "Practice"
   pageRef = "series"
   weight = 20
 
 [[main]]
-  name = "标签"
-  title = "标签"
+  name = "Tags"
+  title = "Tags"
   pageRef = "tags"
   weight = 30
 
 [[main]]
-  name = "关于"
-  title = "关于"
-  pageRef = "authors"
+  name = "About"
+  title = "About"
+  pageRef = "about"
   weight = 40
 
 [[main]]
-  name = "更多"
-  title = "更多"
+  name = "More"
+  title = "More"
+  identifier = "more"
   pageRef = "more"
   weight = 50
 
+[[main]]
+  name = "Contributors"
+  title = "Contributors"
+  parent = "more"
+  pageRef = "contributors"
+  weight = 10
+
+[[main]]
+  identifier = "github"
+  pre = "github"
+  url = "https://github.com/peakxy"
+  weight = 400
+
 
 # -- Footer Menu --
-# The footer menu is displayed at the bottom of the page, just before
-# the copyright notice. Configure as per the main menu above.
-
- [[footer]]
-   name = "Tags"
-   title = "Tags"
-   pageRef = "tags"
-   weight = 10
-
- [[footer]]
-   name = "Authors"
-   title = "Authors"
-   pageRef = "authors"
-   weight = 20
+# The footer menu is intentionally empty.

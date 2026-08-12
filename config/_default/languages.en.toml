@@ -17,7 +17,12 @@ title = "CodeLab"
 [params.author]
   name = "程序员羊肉"
   email = "xu1feng218@163.com"
-  image = "img/figure.png"
+  image = "img/author-icon.jpg"
   imageQuality = 96
   headline = "全栈开发 | AI Agent"
   bio = "一只爱倒腾的程序猿"
+  links = [
+    { github = "https://github.com/peakxy" },
+    { xiaohongshu = "https://www.xiaohongshu.com/user/profile/5ce8c43a0000000005026fa4" },
+    { x-twitter = "https://x.com/peakxy_" },
+  ]

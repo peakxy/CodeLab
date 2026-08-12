@@ -34,7 +34,7 @@ smartTOCHideUnfocusedChildren = false
   layout = "fixed" # valid options: basic, fixed, fixed-fill, fixed-gradient, fixed-fill-blur
 
 [footer]
-  showMenu = true
+  showMenu = false
   showCopyright = true
   showThemeAttribution = true
   showAppearanceSwitcher = true
@@ -43,9 +43,9 @@ smartTOCHideUnfocusedChildren = false
 [homepage]
   layout = "custom" # valid options: page, profile, hero, card, background, custom
   # homepageImage = "/img/iceland.jpg" # used in: hero, and card
-  showRecent = true
+  showRecent = false
   showRecentItems = 6
-  showMoreLink = true
+  showMoreLink = false
   showMoreLinkDest = "blog"
   cardView = true
   cardViewScreenWidth = false

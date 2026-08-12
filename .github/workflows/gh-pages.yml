@@ -24,6 +24,9 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      - name: Update contributor data
+        run: python3 scripts/update_contributors.py
+
       - name: Build
         run: hugo --minify
 

@@ -1,0 +1,33 @@
+{{ $contributors := site.Data.codelab_contributors | default (slice) }}
+{{ $isZh := eq .Page.Language.Lang "zh-cn" }}
+{{ if $contributors }}
+  <div class="not-prose grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    {{ range $contributors }}
+      <a
+        href="{{ .profile_url | safeURL }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group flex items-center gap-4 rounded-2xl border border-neutral-200/70 bg-neutral-100/60 p-4 transition duration-200 hover:-translate-y-0.5 hover:border-primary-400/70 hover:bg-neutral-100 dark:border-neutral-700/70 dark:bg-neutral-800/40 dark:hover:border-primary-400/70 dark:hover:bg-neutral-800"
+        aria-label="{{ .username }} GitHub profile">
+        <img
+          class="h-14 w-14 shrink-0 rounded-full ring-1 ring-neutral-200 transition duration-200 group-hover:ring-2 group-hover:ring-primary-400 dark:ring-neutral-700"
+          src="{{ .avatar_url | safeURL }}"
+          alt="{{ .username }}"
+          width="56"
+          height="56"
+          loading="lazy">
+        <span class="min-w-0">
+          <span class="block truncate text-base font-semibold text-neutral-900 dark:text-neutral-100">{{ .username }}</span>
+          <span class="mt-1 block text-sm text-neutral-600 dark:text-neutral-400">
+            {{ if $isZh }}{{ .contributions }} 个 PR{{ else }}{{ .contributions }} PR{{ end }}
+            {{ with .merged_prs }} · {{ if $isZh }}{{ . }} 个已合并{{ else }}{{ . }} merged{{ end }}{{ end }}
+          </span>
+        </span>
+      </a>
+    {{ end }}
+  </div>
+{{ else }}
+  <p class="not-prose rounded-2xl border border-dashed border-neutral-300 p-6 text-center text-neutral-600 dark:border-neutral-700 dark:text-neutral-400">
+    {{ if $isZh }}暂无贡献记录。{{ else }}No contribution records yet.{{ end }}
+  </p>
+{{ end }}

@@ -31,28 +31,29 @@
 [[main]]
   name = "关于"
   title = "关于"
-  pageRef = "authors"
+  pageRef = "about"
   weight = 40
 
 [[main]]
   name = "更多"
   title = "更多"
+  identifier = "more"
   pageRef = "more"
   weight = 50
 
+[[main]]
+  name = "贡献榜"
+  title = "贡献榜"
+  parent = "more"
+  pageRef = "contributors"
+  weight = 10
+
+[[main]]
+  identifier = "github"
+  pre = "github"
+  url = "https://github.com/peakxy"
+  weight = 400
+
 
 # -- Footer Menu --
-# The footer menu is displayed at the bottom of the page, just before
-# the copyright notice. Configure as per the main menu above.
-
- [[footer]]
-   name = "标签"
-   title = "标签"
-   pageRef = "tags"
-   weight = 10
-
- [[footer]]
-   name = "作者"
-   title = "作者"
-   pageRef = "authors"
-   weight = 20
+# The footer menu is intentionally empty.

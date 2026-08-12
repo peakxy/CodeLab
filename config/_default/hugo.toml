@@ -5,7 +5,7 @@
 theme = "blowfish"
 baseURL = "https://peakxy.github.io/CodeLab/"
 defaultContentLanguage = "zh-cn"
-disableLanguages = ["en"] # keep the Chinese site as the only visible language
+disableLanguages = []
 
 # pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
 
