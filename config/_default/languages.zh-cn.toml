@@ -1,0 +1,23 @@
+disabled = false
+locale = "zh-cn"
+label = "中文"
+weight = 4
+title = "CodeLab"
+
+[params]
+  displayName = "中文"
+  isoCode = "zh-cn"
+  rtl = false
+  dateFormat = "2006-01-02"
+  logo = "img/logo.svg"
+  secondaryLogo = "img/logo_light.svg"
+  description = "CodeLab 的个人博客主页，分享技术与心得"
+  # copyright = "Copy, _right?_ :thinking_face:"
+
+[params.author]
+  name = "程序员羊肉"
+  email = "xu1feng218@163.com"
+  image = "img/figure.png"
+  imageQuality = 96
+  headline = "全栈开发 | AI Agent"
+  bio = "一只爱倒腾的程序猿"

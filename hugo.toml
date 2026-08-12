@@ -1,0 +1,3 @@
+baseURL = 'https://peakxy.github.io/CodeLab/'
+locale = 'zh-cn'
+title = 'CodeLab'
