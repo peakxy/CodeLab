@@ -5,3 +5,6 @@
 
 # IDE metadata
 .idea/
+
+# macOS Finder metadata
+.DS_Store
