@@ -3,7 +3,7 @@
 # https://blowfish.page/docs/getting-started/
 
 theme = "blowfish"
-baseURL = "https://example.org/"
+baseURL = "https://peakxy.github.io/CodeLab/"
 defaultContentLanguage = "zh-cn"
 disableLanguages = ["en"] # keep the Chinese site as the only visible language
 
