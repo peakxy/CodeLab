@@ -39,6 +39,13 @@
   weight = 30
 
 [[main]]
+  name = "工作沉淀"
+  title = "工作沉淀"
+  parent = "knowledge"
+  pageRef = "blog/work"
+  weight = 40
+
+[[main]]
   name = "实战"
   title = "实战"
   pageRef = "series"
@@ -69,6 +76,13 @@
   parent = "more"
   pageRef = "contributors"
   weight = 10
+
+[[main]]
+  name = "网站统计"
+  title = "网站统计"
+  parent = "more"
+  url = "https://umami-blue-theta.vercel.app/share/BEzpGQVeCwg6CQqd"
+  weight = 20
 
 [[main]]
   identifier = "github"
