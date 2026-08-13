@@ -22,7 +22,7 @@
   title = "Agent"
   parent = "knowledge"
   pageRef = "blog/agent"
-  weight = 10
+  weight = 20
 
 [[main]]
   name = "Go"
@@ -36,14 +36,14 @@
   title = "Other"
   parent = "knowledge"
   pageRef = "blog/other"
-  weight = 30
+  weight = 40
 
 [[main]]
   name = "Work Notes"
   title = "Work Notes"
   parent = "knowledge"
   pageRef = "blog/work"
-  weight = 40
+  weight = 30
 
 [[main]]
   name = "Practice"
