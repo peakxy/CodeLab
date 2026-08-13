@@ -138,11 +138,12 @@ smartTOCHideUnfocusedChildren = false
   # domain = "llama.yoursite.com"
 
 [umamiAnalytics]
-  # websiteid = "ABC12345"
-  # domain = "llama.yoursite.com"
-  # dataDomains = "yoursite.com,yoursite2.com"
-  # scriptName = ""
-  # enableTrackEvent = false
+  websiteid = "81f788c9-f2ad-414a-a945-5a624fe058c7"
+  domain = "umami-blue-theta.vercel.app"
+  dataDomains = "peakxy.github.io"
+  scriptName = "baize"
+  enableTrackEvent = true
+  doNotTrack = false
 
 [selineAnalytics]
   # token = "XXXXXX"
