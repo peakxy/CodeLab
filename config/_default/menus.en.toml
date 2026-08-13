@@ -13,8 +13,30 @@
 [[main]]
   name = "Knowledge"
   title = "Knowledge"
+  identifier = "knowledge"
   pageRef = "blog"
   weight = 10
+
+[[main]]
+  name = "Agent"
+  title = "Agent"
+  parent = "knowledge"
+  pageRef = "blog/agent"
+  weight = 10
+
+[[main]]
+  name = "Go"
+  title = "Go"
+  parent = "knowledge"
+  pageRef = "blog/go"
+  weight = 20
+
+[[main]]
+  name = "Other"
+  title = "Other"
+  parent = "knowledge"
+  pageRef = "blog/other"
+  weight = 30
 
 [[main]]
   name = "Practice"

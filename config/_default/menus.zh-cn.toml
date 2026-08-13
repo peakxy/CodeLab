@@ -13,8 +13,30 @@
 [[main]]
   name = "知识"
   title = "知识"
+  identifier = "knowledge"
   pageRef = "blog"
   weight = 10
+
+[[main]]
+  name = "Agent"
+  title = "Agent"
+  parent = "knowledge"
+  pageRef = "blog/agent"
+  weight = 10
+
+[[main]]
+  name = "Go"
+  title = "Go"
+  parent = "knowledge"
+  pageRef = "blog/go"
+  weight = 20
+
+[[main]]
+  name = "其他"
+  title = "其他"
+  parent = "knowledge"
+  pageRef = "blog/other"
+  weight = 30
 
 [[main]]
   name = "实战"

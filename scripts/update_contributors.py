@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh the CodeLab contributor leaderboard from GitHub pull requests."""
+"""Refresh the CodeLab contributor leaderboard from GitHub commits."""
 
 from __future__ import annotations
 
@@ -13,13 +13,12 @@ from urllib.request import Request, urlopen
 REPOSITORY = os.environ.get("GITHUB_REPOSITORY", "peakxy/CodeLab")
 API_ROOT = os.environ.get("GITHUB_API_URL", "https://api.github.com").rstrip("/")
 OUTPUT = Path(__file__).resolve().parents[1] / "data" / "codelab_contributors.json"
-QUALIFYING_ASSOCIATIONS = {"OWNER", "COLLABORATOR", "MEMBER"}
 
 
-def fetch_pull_requests(page: int) -> list[dict]:
-    query = urlencode({"state": "all", "per_page": 100, "page": page})
+def fetch_commits(page: int) -> list[dict]:
+    query = urlencode({"per_page": 100, "page": page})
     request = Request(
-        f"{API_ROOT}/repos/{REPOSITORY}/pulls?{query}",
+        f"{API_ROOT}/repos/{REPOSITORY}/commits?{query}",
         headers={
             "Accept": "application/vnd.github+json",
             "User-Agent": "CodeLab-contributor-updater",
@@ -42,19 +41,14 @@ def collect_contributors() -> list[dict]:
     page = 1
 
     while True:
-        pull_requests = fetch_pull_requests(page)
-        if not pull_requests:
+        commits = fetch_commits(page)
+        if not commits:
             break
 
-        for pull_request in pull_requests:
-            user = pull_request.get("user") or {}
+        for commit in commits:
+            user = commit.get("author") or {}
             login = user.get("login")
             if not login:
-                continue
-
-            merged = bool(pull_request.get("merged_at"))
-            association = (pull_request.get("author_association") or "").upper()
-            if not merged and association not in QUALIFYING_ASSOCIATIONS:
                 continue
 
             contributor = contributors.setdefault(
@@ -64,20 +58,17 @@ def collect_contributors() -> list[dict]:
                     "avatar_url": user.get("avatar_url", ""),
                     "profile_url": user.get("html_url", f"https://github.com/{login}"),
                     "contributions": 0,
-                    "merged_prs": 0,
                 },
             )
             contributor["contributions"] += 1
-            contributor["merged_prs"] += int(merged)
 
-        if len(pull_requests) < 100:
+        if len(commits) < 100:
             break
         page += 1
 
     return sorted(
         contributors.values(),
         key=lambda contributor: (
-            -contributor["merged_prs"],
             -contributor["contributions"],
             contributor["username"].lower(),
         ),

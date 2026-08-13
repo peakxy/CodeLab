@@ -19,8 +19,7 @@
         <span class="min-w-0">
           <span class="block truncate text-base font-semibold text-neutral-900 dark:text-neutral-100">{{ .username }}</span>
           <span class="mt-1 block text-sm text-neutral-600 dark:text-neutral-400">
-            {{ if $isZh }}{{ .contributions }} 个 PR{{ else }}{{ .contributions }} PR{{ end }}
-            {{ with .merged_prs }} · {{ if $isZh }}{{ . }} 个已合并{{ else }}{{ . }} merged{{ end }}{{ end }}
+            {{ if $isZh }}{{ .contributions }} 个提交{{ else }}{{ .contributions }} commits{{ end }}
           </span>
         </span>
       </a>
