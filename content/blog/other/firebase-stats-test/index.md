@@ -4,6 +4,7 @@ date: 2026-08-01T12:00:00+08:00
 description: "用于验证 Blowfish Firebase 浏览数和点赞数是否正常工作。"
 showViews: true
 showLikes: true
+firebaseStatsId: "blog/firebase-stats-test/index.md"
 tags: ["Firebase", "测试"]
 ---
 

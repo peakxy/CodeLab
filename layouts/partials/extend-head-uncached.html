@@ -1,0 +1,12 @@
+{{ with .Params.firebaseStatsId }}
+  <script data-firebase-stats-id="{{ . }}">
+    (() => {
+      const statsId = document.currentScript.dataset.firebaseStatsId;
+      const config = document.getElementById("firebase-config");
+      if (!config) return;
+
+      config.dataset.views = `views_${statsId}`;
+      config.dataset.likes = `likes_${statsId}`;
+    })();
+  </script>
+{{ end }}

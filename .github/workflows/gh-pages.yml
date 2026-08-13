@@ -33,6 +33,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 scripts/update_contributors.py
 
+      - name: Validate Firebase statistics IDs
+        run: python3 scripts/validate_firebase_stats.py
+
       - name: Build
         run: hugo --minify
 

@@ -1,0 +1,21 @@
+{{- $id := "null" -}}
+{{- with .Params.firebaseStatsId -}}
+  {{- $id = . -}}
+{{- else -}}
+  {{- if eq .Kind "taxonomy" -}}
+    {{- $id = printf "taxonomy_%s" .Page.Data.Plural -}}
+  {{- else if eq .Kind "term" -}}
+    {{- $id = printf "term_%s" .Page.Data.Term -}}
+  {{- else -}}
+    {{- $translations := .AllTranslations -}}
+    {{- with .File -}}
+      {{- $path := .Path -}}
+      {{- range $translations -}}
+        {{- $lang := print "." .Language.Name ".md" -}}
+        {{- $path = replace $path $lang ".md" -}}
+      {{- end -}}
+      {{- $id = $path -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $id -}}
