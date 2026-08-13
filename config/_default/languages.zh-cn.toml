@@ -11,7 +11,7 @@ title = "CodeLab"
   dateFormat = "2006-01-02"
   logo = "img/logo.svg"
   secondaryLogo = "img/logo_light.svg"
-  description = "CodeLab 的个人博客主页，分享技术与心得"
+  description = "程序员羊肉的技术博客，聚焦 Go、全栈开发、AI Agent 与真实工程问题排查，分享可复现的技术实践和解决方案。"
   # copyright = "Copy, _right?_ :thinking_face:"
 
 [params.author]
@@ -23,6 +23,6 @@ title = "CodeLab"
   bio = "一只爱倒腾的程序猿"
   links = [
     { github = "https://github.com/peakxy" },
-    { xiaohongshu = "https://www.xiaohongshu.com/user/profile/5ce8c43a0000000005026fa4" },
+    { knowledgebase = "https://www.xiaohongshu.com/user/profile/5ce8c43a0000000005026fa4" },
     { x-twitter = "https://x.com/peakxy_" },
   ]

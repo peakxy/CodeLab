@@ -11,12 +11,13 @@ autoSwitchAppearance = true
 
 enableSearch = true
 enableCodeCopy = true
+enableStructuredBreadcrumbs = true
 
 replyByEmail = false
 
 # 控制主页面的最近文章来源
 mainSections = ["blog"]
-# robots = ""
+robots = "max-image-preview:large"
 
 disableImageOptimization = false
 disableTextInHeader = false
@@ -24,7 +25,10 @@ disableTextInHeader = false
 
 defaultBackgroundImage = "/img/background.svg"
 defaultFeaturedImage = "/img/featured.svg"
-# defaultSocialImage = "/android-chrome-512x512.png" # used as default for social media sharing (Open Graph and Twitter)
+defaultSocialImage = "img/figure.png" # used as default for social media sharing (Open Graph and Twitter)
+
+[seo]
+  metaDescriptionOrder = ["description", "summary", "site"]
 
 highlightCurrentMenuArea = true
 smartTOC = true
