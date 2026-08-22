@@ -5,6 +5,7 @@ description: "介绍 CodeLab 的定位与作者"
 showViews: true
 showLikes: true
 tags: ["自我介绍"]
+featureimage: "img/featured-patterns/ctm-note.svg"
 ---
 
 # 关于 CodeLab

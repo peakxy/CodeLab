@@ -9,6 +9,8 @@ draft: true
 description: ""
 # 文章标签，没有标签时可以保持为空数组。
 tags: []
+# 创建文章时随机选择一张封面，生成后保持不变。
+featureimage: "{{ index (shuffle (slice "img/featured-patterns/bayesianopt.svg" "img/featured-patterns/code-collaboration-scheme.svg" "img/featured-patterns/ctm-note.svg" "img/featured-patterns/cumcm2024.svg" "img/featured-patterns/hugo-blog.svg" "img/featured-patterns/llm-memory.svg" "img/featured-patterns/llm-training-playbook.svg" "img/featured-patterns/localoverleaf.svg" "img/featured-patterns/plugin-writing-experience.svg" "img/featured-patterns/pytips.svg" "img/featured-patterns/qdrant-feature-guide.svg")) 0 }}"
 # 文章详情页是否显示浏览数和点赞数。
 showViews: true
 showLikes: true

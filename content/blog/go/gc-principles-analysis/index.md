@@ -4,6 +4,7 @@ date: 2026-08-22T18:11:15+08:00
 draft: false
 description: "介绍常见垃圾回收算法、Go 三色标记法、并发垃圾回收及混合写屏障机制。"
 tags: ["Go", "GC"]
+featureimage: "img/featured-patterns/localoverleaf.svg"
 showViews: true
 showLikes: true
 firebaseStatsId: "gc-principles-analysis"

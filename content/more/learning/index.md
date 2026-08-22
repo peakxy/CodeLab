@@ -5,6 +5,7 @@ description: "整理相关的学习资料，包括技术路线、书籍和文档
 showViews: true
 showLikes: true
 tags: ["学习资料"]
+featureimage: "img/featured-patterns/code-collaboration-scheme.svg"
 ---
 
 # 学习资料
