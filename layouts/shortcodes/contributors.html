@@ -1,4 +1,4 @@
-{{ $contributors := site.Data.codelab_contributors | default (slice) }}
+{{ $contributors := hugo.Data.codelab_contributors | default (slice) }}
 {{ $isZh := eq .Page.Language.Lang "zh-cn" }}
 {{ if $contributors }}
   <div class="not-prose grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
